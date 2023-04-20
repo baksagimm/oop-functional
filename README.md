@@ -1,26 +1,24 @@
-## 1. OOP & Typescript / Functional programming
+# OOP & Typescript / Functional programming
+- Code contains some examples of OOP & Functional programming.
+- Understand the two different paradigms and learn to use them each in right situations.
+- Learn to write typescript.
 
-Code contains some examples of OOP & Functional programming.
 
-Understand the two different paradigms and learn to use them each in right situations.
+# Understanding network requests
+- "node_server.js" contains basic server script.
+- Understand how "node_server.js" is hosting a 'Server'.
+- Understand the http responses.
 
-Learn to write typescript.
 
-## 2. Understanding network requests
+# How to start
+- Install the package
+    ```
+    npm i
+    ```
 
-Understand how "node_server.js" is hosting a 'Server'.
-Understand the http responses.
+- Start the server
+    ```
+    npm run start
+    ```
 
-## How to start
-
-Install the package
-```
-npm i
-```
-
-Start the server
-```
-npm run start
-```
-
-Open the webbrowser: http://localhost:8080
+- Open the webbrowser: http://localhost:8080
