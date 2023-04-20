@@ -15,6 +15,10 @@
     ```
     npm i
     ```
+- Compile typescript
+    ```
+    npm run build
+    ```
 
 - Start the server
     ```
