@@ -41,11 +41,6 @@ export class Profile {
     }
 
     @myDecorator()
-    addNumber(a, b) {
-        return a + b;
-    }
-
-    @myDecorator()
     changeMyProfile(name: string, age: number, gender: 'male' | 'female', countryCode: string) {
         // setup this.user data
         this.user = {
