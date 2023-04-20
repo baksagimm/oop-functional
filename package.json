@@ -1,0 +1,24 @@
+{
+  "name": "typescript-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc -p tsconfig.json",
+    "start": "npx tsc -p tsconfig.json;node node_server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baksagimm/typescript-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baksagimm/typescript-example/issues"
+  },
+  "homepage": "https://github.com/baksagimm/typescript-example#readme",
+  "dependencies": {
+    "typescript": "^5.0.3"
+  }
+}

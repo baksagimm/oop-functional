@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="profile-func.js"></script>
+</head>
+
+<body>
+    <h1>1. OOP & Typescript / Functional programming</h1>
+    <pre>
+        Examples of OOP & Functional programming.
+        Understand the two different paradigms and learn to use them each in right situations.
+        Learn to write typescript.
+    </pre>
+
+    <h1>OOP programming:</h1>
+    <div id="oop_programming"></div>
+    <br>
+    <div id="oop_purchase" style="white-space: pre;"></div>
+
+    <br>
+
+    <h1>Functional programming:</h1>
+    <div id="func_programming"></div>
+    <br>
+    <div id="func_purchase" style="white-space: pre;"></div>
+
+    <br>
+    
+    <hr>
+
+    <h1>2. Understanding network requests</h1>
+    <pre>
+        Understand how "node_server.js" is hosting a 'Server'.
+        Understand the http responses.
+        Checkout these links below and see how it responds.
+        <a href="http://localhost:8080/text-index">http://localhost:8080/text-index</a>
+        <a href="http://localhost:8080/am-i-a-file.exe">http://localhost:8080/am-i-a-file.exe</a>
+        <a href="http://localhost:8080/another-index">http://localhost:8080/another-index</a>
+        <a href="http://localhost:8080/download-index">http://localhost:8080/download-index</a>
+    </pre>
+</body>
+<script type="module">
+    /**
+     * OOP way
+     */
+    import { Profile } from "/js/profile-class.js";
+
+    let baksa = new Profile('Baksa', 38, 'male', 'AE'); // initialized a new object
+    oop_programming.append(baksa.createHtmlDiv());
+
+    let kyubi = new Profile('Kyubi', 17, 'female', 'KR');
+    oop_programming.append(kyubi.createHtmlDiv());
+
+    oop_purchase.textContent = baksa.purchaseCigar() + '\n' + kyubi.purchaseCigar();
+
+    // is baksa a profile object?
+    console.log('Is baksa instance of Profile?: ', baksa instanceof Profile);
+
+    baksa.changeMyProfile('Raffina', 30, 'female', 'CA'); // check out what decorators are doing in profile-class.ts
+    oop_programming.append(baksa.createHtmlDiv());
+
+    /**
+     * Functional way
+     */
+    let baksaObj = {
+        name: 'Baksa',
+        age: 38,
+        gender: 'male',
+        country: countries.AE.name,
+        flag: countries.AE.flag
+    };
+    func_programming.append(createProfileDiv(baksaObj));
+
+    let kyubiObj = {
+        name: 'Kyubi',
+        age: 17,
+        gender: 'female',
+        country: countries.KR.name,
+        flag: countries.KR.flag
+    };
+    func_programming.append(createProfileDiv(kyubiObj));
+    func_purchase.textContent = purchaseCigar(baksaObj.name, baksaObj.age) + '\n' + purchaseCigar(kyubiObj.name, kyubiObj.age);
+
+    // baksaObj is not a profile object
+    console.log('Is baksa instance of Profile?: ', baksaObj instanceof Profile);
+
+    baksaObj = {
+        name: 'Raffina',
+        age: 30,
+        gender: 'female',
+        country: countries.CA.name,
+        flag: countries.CA.flag
+    };
+    func_programming.append(createProfileDiv(baksaObj));
+
+</script>
